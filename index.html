@@ -10,9 +10,29 @@
 <body>
     <h1>This is Vue</h1>
 <div id="app">
-    <h2>{{title}}</h2>
-    <p>{{description}} {{age}}</p>
- <button v-on:click="age++" >Increase Age</button>
+    <div  v-if="true">
+        <h2>{{title}}</h2>
+        <p>{{description}} {{sentence}} {{age}}</p>
+    </div>
+    <div v-if="false">
+<h3>THis will cease to exist</h3>
+    </div>
+
+    <div v-if="showSentence">
+<h3>if true then pass</h3>
+    </div>
+<button @click="toggleShowSentence">
+    <span v-if="showSentence">
+hide
+    </span>
+    <span v-else>
+show
+    </span>
+</button>
+<br>
+<div v-else>
+    the sentences
+</div>
 </div>
 
     <script src="/script.js"></script>
