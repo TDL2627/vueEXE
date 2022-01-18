@@ -2,18 +2,21 @@
         const app =  Vue.createApp({
             data(){
                 return{
-               showDiscography:true,
+                    url:"https://www.instagram.com/cordae/?hl=en",
+                    showDiscography:true,
                discographies:[
                    {
                        artist: 'Cordae',
                        album:'Lost Boy',
-                       genre:'Rap'
+                       genre:'Rap',
+                       img:'assests/1.jpg'
 
                    },
                    {
                     artist: 'Khalid',
                     album:'Dumb',
-                    genre:'R & B'  
+                    genre:'R & B',
+                    img:'assests/2.jpg'
                    },
                    {
                     artist: 'XXXtentation',

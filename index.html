@@ -9,18 +9,31 @@
 </head>
 <body>
     <h1>This is Vue</h1>
+    
 <div id="app">
+    <a :href="url">Link</a>
 <div v-if="showDiscography">
 <ul>
     <li v-for="discography in discographies">
+        <img :src="discography.img" alt="artist" style="width: 100px; height: 100px;">
         <h3><span style="font-weight: bold;">Artist :</span>{{discography.artist}}</h3>
         <p><span style="font-weight: bold;">Album :</span>{{discography.album}}</p>
         <p><span style="font-weight: bold;">Genre :</span>{{discography.genre}}</h3>
 
 
+
     </li>
 </ul>
 </div>
+
+<button @click="toggleShowDiscography">
+    <span v-if="showDiscography">
+hide
+    </span>
+    <span v-else>
+show
+    </span>
+</button>
 </div>
 
     <script src="/script.js"></script>
