@@ -2,19 +2,34 @@
         const app =  Vue.createApp({
             data(){
                 return{
-                    showSentence: true,
-                    title:"John",
-                    description:"im a goat and ",
-                    sentence:"i am",
-                    age:27
+               showDiscography:true,
+               discographies:[
+                   {
+                       artist: 'Cordae',
+                       album:'Lost Boy',
+                       genre:'Rap'
+
+                   },
+                   {
+                    artist: 'Khalid',
+                    album:'Dumb',
+                    genre:'R & B'  
+                   },
+                   {
+                    artist: 'XXXtentation',
+                    album:'?',
+                    genre:'Rock'
+                   }
+               ]
                 }
             },
             methods: {
-           toggleShowSentence(){
-               this.showSentence =!this.showSentence
-           }
+         toggleShowDiscography(){
+             this.showDiscography=!this.showDiscography;
+         }
             }
             
             })
             
             app.mount('#app');
+        
